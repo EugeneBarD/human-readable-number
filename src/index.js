@@ -3,16 +3,18 @@ module.exports = function toReadable (number)
     let units = number % 10
     number -= units
     number /= 10
+    
     let dozens = number % 10
     number -= dozens
     number /= 10
+    
     let hundreds = number % 10
     number -= hundreds
     number /= 10
+    
     if(units == 0 && dozens == 0 && hundreds == 0) return 'zero'
 
     let stringnumber = ''
-   
     let unitstring = ''
     let dozenstring = ''
     
